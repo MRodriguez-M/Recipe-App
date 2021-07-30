@@ -26,7 +26,16 @@ function App() {
           Search
         </button>
       </form>
-      <Recipes />
+      {
+        recipes.map(dish => 
+          (
+          <Recipes
+            name={dish.recipe.label}
+            dishType={dish.recipe.dishType}
+            image={dish.recipe.image}
+          />
+        ))
+      }
     </div>
   );
 };
