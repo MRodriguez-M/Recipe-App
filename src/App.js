@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Recipes from './Recipes';
+import Recipe from './Recipe';
 
 function App() {
   const APP_ID = "8d5395c8";
@@ -35,10 +35,12 @@ function App() {
       {
         recipes.map(dish => 
           (
-          <Recipes
+          <Recipe
             name={dish.recipe.label}
             dishType={dish.recipe.dishType}
             image={dish.recipe.image}
+            ingredients={dish.recipe.ingredientLines}
+
           />
         ))
       }
