@@ -8,4 +8,7 @@ export const Card = styled.div`
   border-radius: 10px;
   padding: 25px;
   margin: 10px;
+  h2 {
+    margin: 0;
+  }
 `;
