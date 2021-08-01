@@ -33,10 +33,14 @@ function App() {
         </button>
       </form>
       {
-        recipes.map(dish => 
+        recipes.map((dish, index) => 
           (
           <Recipe
+            key={`${dish.recipe.label}-${index}`}
             name={dish.recipe.label}
+            mealType={dish.recipe.mealType}
+            calories={dish.recipe.calories}
+            healthLabels={dish.recipe.healthLabels}
             dishType={dish.recipe.dishType}
             image={dish.recipe.image}
             ingredients={dish.recipe.ingredientLines}
